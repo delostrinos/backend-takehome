@@ -1,0 +1,93 @@
+{
+  "note_id": "note-0000002",
+  "text": "PATIENT: Layla Moore\nMRN: 2375453\nDOB: 07/22/1940\nDATE OF SERVICE: 10/19/2025\n\nHISTORY OF PRESENT ILLNESS:\nLayla Moore is a 85-year-old female presenting with acute lower back pain. She has a known history of hyperlipidemia and COPD. Symptoms are worse with rest. Over-the-counter analgesics have provided minimal relief. She reports symptoms began approximately 7 days ago. The patient's brother, Layla, is present and notes increased confusion at home. Per Margaret (brother), the patient has been less active recently. The case was discussed with Dr. Brian Jones of pulmonology. \n\nREVIEW OF SYSTEMS:\nReports intermittent joint stiffness in the morning. No visual changes or hearing loss. Positive for occasional headaches. Reports a nonproductive cough for the past week. Denies fever, chills, or night sweats.\n\nPHYSICAL EXAM:\nVITALS: BP 138/64, HR 110, RR 14, Temp 97.9F, SpO2 93% on room air.\nCARDIOVASCULAR: Regular rate and rhythm, no murmurs, rubs, or gallops.\nABDOMEN: Soft, non-tender, non-distended. Normal bowel sounds.\nPSYCHIATRIC: Appropriate mood and affect.\nSKIN: Warm and dry, no lesions.\nHEENT: Normocephalic, atraumatic. Mucous membranes moist.\nNEUROLOGIC: Cranial nerves II-XII grossly intact. Strength 5/5 throughout.\nGENERAL: Alert and oriented x3, in no acute distress.\nEXTREMITIES: No edema, cyanosis, or clubbing. Pulses 2+ bilaterally.\n\nLABS:\nBasic metabolic panel otherwise within normal limits. HbA1c 5.4%. Sodium 134, Potassium 4.5, Creatinine 1.93.\n\nCURRENT MEDICATIONS:\n1. furosemide 20 mg daily\n2. omeprazole 20 mg daily\n3. insulin glargine 20 units nightly\n4. lisinopril 10 mg daily\n5. metformin 1000 mg twice daily\n6. sertraline 50 mg daily\n\nASSESSMENT AND PLAN:\n1. Copd: Follow-up labs ordered. Referral placed to specialty clinic.\n2. Gerd: Follow-up labs ordered. Continue current regimen.\n3. Hypertension: Discussed lifestyle modification in detail. Follow-up labs ordered.\n4. Chronic kidney disease stage 3: Continue current regimen. Follow-up labs ordered.\n\nElectronically signed by A. Moore, MD on 06/25/2025.\n",
+  "internal_annotations": [
+    {
+      "type": "LAST_NAME",
+      "text": "Moore",
+      "start": 15,
+      "end": 20
+    },
+    {
+      "type": "MRN",
+      "text": "2375453",
+      "start": 26,
+      "end": 33
+    },
+    {
+      "type": "DATE",
+      "text": "07/22/1940",
+      "start": 39,
+      "end": 49
+    },
+    {
+      "type": "DATE",
+      "text": "10/19/2025",
+      "start": 67,
+      "end": 77
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Moore",
+      "start": 113,
+      "end": 118
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "Margaret",
+      "start": 459,
+      "end": 467
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "Brian",
+      "start": 554,
+      "end": 559
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Jones",
+      "start": 560,
+      "end": 565
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Moore",
+      "start": 2025,
+      "end": 2030
+    },
+    {
+      "type": "DATE",
+      "text": "06/25/2025",
+      "start": 2038,
+      "end": 2048
+    }
+  ],
+  "ground_truth_first_names": [
+    {
+      "text": "Layla",
+      "start": 9,
+      "end": 14
+    },
+    {
+      "text": "Layla",
+      "start": 107,
+      "end": 112
+    },
+    {
+      "text": "Layla",
+      "start": 398,
+      "end": 403
+    },
+    {
+      "text": "Margaret",
+      "start": 459,
+      "end": 467
+    },
+    {
+      "text": "Brian",
+      "start": 554,
+      "end": 559
+    }
+  ]
+}

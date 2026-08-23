@@ -1,0 +1,71 @@
+{
+  "note_id": "note-0000003",
+  "text": "PATIENT: Luis Johnson\nMRN: 6573147\nDOB: 07/26/1957\nDATE OF SERVICE: 11/28/2024\n\nHISTORY OF PRESENT ILLNESS:\nLuis Johnson is a 68-year-old female presenting with poorly controlled blood glucose. She has a known history of asthma and atrial fibrillation. Over-the-counter analgesics have provided minimal relief. She rates the discomfort 2/10 at worst. The patient's caregiver, Matthew, is present and notes increased coughing at home. \n\nREVIEW OF SYSTEMS:\nNo dysuria or hematuria. Reports a nonproductive cough for the past week. No visual changes or hearing loss. Denies unintentional weight loss. No rashes or skin changes noted. Denies fever, chills, or night sweats.\n\nPHYSICAL EXAM:\nVITALS: BP 114/74, HR 65, RR 21, Temp 100.3F, SpO2 96% on room air.\nHEENT: Normocephalic, atraumatic. Mucous membranes moist.\nNEUROLOGIC: Cranial nerves II-XII grossly intact. Strength 5/5 throughout.\nCARDIOVASCULAR: Regular rate and rhythm, no murmurs, rubs, or gallops.\nEXTREMITIES: No edema, cyanosis, or clubbing. Pulses 2+ bilaterally.\n\nLABS:\nWBC 10.7, Hgb 13.1, Plt 411. TSH within reference range. Sodium 134, Potassium 4.1, Creatinine 1.52. LDL 150 mg/dL. HbA1c 6.6%.\n\nCURRENT MEDICATIONS:\n1. aspirin 81 mg daily\n2. albuterol inhaler as needed\n3. sertraline 50 mg daily\n\nElectronically signed by K. Davis, MD on 05/17/2025.\n",
+  "internal_annotations": [
+    {
+      "type": "LAST_NAME",
+      "text": "Johnson",
+      "start": 14,
+      "end": 21
+    },
+    {
+      "type": "MRN",
+      "text": "6573147",
+      "start": 27,
+      "end": 34
+    },
+    {
+      "type": "DATE",
+      "text": "07/26/1957",
+      "start": 40,
+      "end": 50
+    },
+    {
+      "type": "DATE",
+      "text": "11/28/2024",
+      "start": 68,
+      "end": 78
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "Luis",
+      "start": 108,
+      "end": 112
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Johnson",
+      "start": 113,
+      "end": 120
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Davis",
+      "start": 1293,
+      "end": 1298
+    },
+    {
+      "type": "DATE",
+      "text": "05/17/2025",
+      "start": 1306,
+      "end": 1316
+    }
+  ],
+  "ground_truth_first_names": [
+    {
+      "text": "Luis",
+      "start": 9,
+      "end": 13
+    },
+    {
+      "text": "Luis",
+      "start": 108,
+      "end": 112
+    },
+    {
+      "text": "Matthew",
+      "start": 376,
+      "end": 383
+    }
+  ]
+}

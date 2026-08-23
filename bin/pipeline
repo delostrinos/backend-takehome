@@ -1,0 +1,252 @@
+#!/usr/bin/env ruby
+# Backstop pipeline: finds first names the internal NER model missed.
+# Reads notes.jsonl, resolves what it can locally, sends snippet windows of
+# unresolved candidate words to the mock LLM (packed, rate-limited), and
+# appends per-note missed-first-name spans to the output JSONL.
+require 'optparse'
+require 'json'
+require 'set'
+require_relative '../lib/candidates'
+require_relative '../lib/name_cache'
+require_relative '../lib/packer'
+require_relative '../lib/client'
+require_relative '../lib/results'
+
+options = {
+  input: 'data/notes.jsonl',
+  output: 'out/results.jsonl',
+  api: 'http://127.0.0.1:8000',
+  tpm: 40_000, rpm: 100, workers: 4,
+  limit: nil,
+  audit_rate: 0.005,      # reject-cached occurrences re-checked at this rate
+  full_audit_rate: 0.002, # notes sent in full to bound filter misses
+  seed: 42
+}
+OptionParser.new do |o|
+  o.banner = 'Usage: bin/pipeline [options]'
+  o.on('--input PATH')                 { |v| options[:input] = v }
+  o.on('--output PATH')                { |v| options[:output] = v }
+  o.on('--api URL')                    { |v| options[:api] = v }
+  o.on('--tpm N', Integer)             { |v| options[:tpm] = v }
+  o.on('--rpm N', Integer)             { |v| options[:rpm] = v }
+  o.on('--workers N', Integer)         { |v| options[:workers] = v }
+  o.on('--limit N', Integer)           { |v| options[:limit] = v }
+  o.on('--audit-rate F', Float)        { |v| options[:audit_rate] = v }
+  o.on('--full-audit-rate F', Float)   { |v| options[:full_audit_rate] = v }
+  o.on('--seed N', Integer)            { |v| options[:seed] = v }
+end.parse!
+
+WINDOW_PAD = 30
+
+# ±PAD chars around the occurrence, extended outward to whitespace so no
+# word is ever clipped, then overlapping windows merged.
+def build_windows(text, occurrences)
+  wins = occurrences.map do |o|
+    ws = [o[:start] - WINDOW_PAD, 0].max
+    we = [o[:end] + WINDOW_PAD, text.length].min
+    ws -= 1 while ws > 0 && text[ws - 1] !~ /\s/
+    we += 1 while we < text.length && text[we] !~ /\s/
+    [ws, we]
+  end
+  merged = []
+  wins.sort.each do |ws, we|
+    if merged.any? && ws <= merged.last[1]
+      merged.last[1] = [merged.last[1], we].max
+    else
+      merged << [ws, we]
+    end
+  end
+  merged
+end
+
+def make_span(text, occ, source)
+  { 'text' => text[occ[:start]...occ[:end]],
+    'start' => occ[:start], 'end' => occ[:end], 'source' => source }
+end
+
+def dedupe_spans(spans)
+  spans.uniq { |s| [s['start'], s['end']] }.sort_by { |s| s['start'] }
+end
+
+def overlaps_annotation?(annotations, s, e)
+  annotations.any? { |a| s < a['end'] && a['start'] < e }
+end
+
+# -> [local_spans, to_send] where to_send is [{word:, occs:}]
+def triage(note, cache, stats, full_audit)
+  text = note['text']
+  anns = note['internal_annotations']
+  ner_first = anns.select { |a| a['type'] == 'FIRST_NAME' }
+                  .map { |a| a['text'] }.to_set
+  local_spans = []
+  to_send = []
+  Candidates.extract(text, anns).group_by { |c| c[:word] }.each do |word, occs|
+    if ner_first.include?(word)
+      # NER vouched for this exact string in this note; other occurrences
+      # of it are misses we can emit for free.
+      occs.each { |o| local_spans << make_span(text, o, 'ner_match') }
+    elsif cache.confirmed?(word)
+      occs.each { |o| local_spans << make_span(text, o, 'cache') }
+    elsif !full_audit && cache.rejected?(word)
+      if cache.audit?
+        stats.count(:audit_probes)
+        to_send << { word: word, occs: occs }
+      else
+        stats.count(:cache_skips)
+      end
+    else
+      to_send << { word: word, occs: occs }
+    end
+  end
+  [local_spans, to_send]
+end
+
+def handle_batch(batch, client, cache, writer, stats)
+  mapped = client.extract(batch.prompt).filter_map do |ex|
+    m = batch.map(ex['start'], ex['end'])
+    m && m.merge(text: ex['name'])
+  end
+  # The mock (like a real LLM on a snippet) is word-level consistent: one
+  # confirmation anywhere in the batch confirms the word everywhere.
+  confirmed_words = mapped.map { |m| m[:text] }.to_set
+  by_job = mapped.group_by { |m| m[:job] }
+
+  batch.jobs.each do |job|
+    anns = job.note['internal_annotations']
+    spans = job.local_spans.dup
+    sent_word_set = job.sent_words.map { |sw| sw[:word] }.to_set
+
+    (by_job[job] || []).each do |m|
+      next if overlaps_annotation?(anns, m[:start], m[:end])
+      spans << { 'text' => m[:text], 'start' => m[:start], 'end' => m[:end],
+                 'source' => job.audit_full ? 'audit_full' : 'llm' }
+      unless sent_word_set.include?(m[:text])
+        # Name found in window context (or full-note audit) that the
+        # candidate filter never proposed: on an audit note that is a
+        # measured filter miss — the number that bounds filter risk.
+        if job.audit_full && !cache.confirmed?(m[:text])
+          stats.count(:filter_misses)
+          warn "FILTER MISS: #{m[:text].inspect} in #{job.note_id}"
+        end
+        cache.confirm!(m[:text])
+      end
+    end
+
+    job.sent_words.each do |sw|
+      if confirmed_words.include?(sw[:word])
+        stats.count(:audit_reversals) if cache.rejected?(sw[:word])
+        cache.confirm!(sw[:word])
+        sw[:occs].each { |o| spans << make_span(job.note['text'], o, 'llm') }
+      else
+        cache.reject!(sw[:word], job.note_id)
+      end
+    end
+
+    writer.write(job.note_id, dedupe_spans(spans))
+    stats.count(:notes_done)
+  end
+rescue Client::GaveUp, Client::RequestTooLarge => e
+  stats.count(:failed_batches)
+  stats.add(:failed_notes, batch.jobs.length)
+  warn "batch of #{batch.jobs.length} notes failed permanently: #{e.message} " \
+       '(notes left unwritten; a rerun will retry them)'
+end
+
+# ---- wiring ----------------------------------------------------------------
+
+done, warm_names = ResultsWriter.load_done(options[:output])
+rng = Random.new(options[:seed])
+stats = Stats.new
+cache = NameCache.new(audit_rate: options[:audit_rate], rng: rng)
+warm_names.each { |w| cache.confirm!(w) }
+writer = ResultsWriter.new(options[:output])
+client = Client.new(base_url: options[:api], tpm: options[:tpm],
+                    rpm: options[:rpm], stats: stats)
+
+total = 0
+File.foreach(options[:input]) { total += 1 }
+total = [total, options[:limit]].min if options[:limit]
+
+puts "pipeline: #{total} notes from #{options[:input]} -> #{options[:output]}"
+puts "resume: skipping #{done.size} already-done notes " \
+     "(#{warm_names.size} cached names rewarmed)" unless done.empty?
+
+queue = SizedQueue.new(options[:workers] * 2)
+workers = options[:workers].times.map do
+  Thread.new do
+    while (batch = queue.pop)
+      handle_batch(batch, client, cache, writer, stats)
+    end
+  end
+end
+workers.each { |t| t.abort_on_exception = true }
+
+reporter = Thread.new do
+  loop do
+    sleep 5
+    s = stats.snapshot
+    processed = s[:notes_done] + s[:resumed]
+    rate = s[:notes_done] / stats.elapsed
+    eta = rate.positive? ? ((total - processed) / rate).round : '?'
+    puts format('[%6.1fs] %d/%d notes | %.1f notes/s | %dk tok | %d req | ' \
+                '429:%d 500:%d | cache skips:%d | ETA %ss',
+                stats.elapsed, processed, total, rate,
+                s[:tokens_spent] / 1000, s[:requests],
+                s[:http_429], s[:http_500], s[:cache_skips], eta)
+  end
+end
+
+packer = Packer.new
+read = 0
+File.foreach(options[:input]) do |line|
+  break if options[:limit] && read >= options[:limit]
+  read += 1
+  note = JSON.parse(line)
+  if done.include?(note['note_id'])
+    stats.count(:resumed)
+    next
+  end
+
+  full_audit = rng.rand < options[:full_audit_rate]
+  local_spans, to_send = triage(note, cache, stats, full_audit)
+
+  if to_send.empty? && !full_audit
+    writer.write(note['note_id'], dedupe_spans(local_spans))
+    stats.count(:notes_done)
+    stats.count(:local_only)
+    next
+  end
+
+  stats.count(:full_audits) if full_audit
+  windows = if full_audit
+              [[0, note['text'].length]]
+            else
+              build_windows(note['text'], to_send.map { |sw| sw[:occs].first })
+            end
+  job = NoteJob.new(note: note, windows: windows, sent_words: to_send,
+                    local_spans: local_spans, audit_full: full_audit)
+  if (full = packer.add(job))
+    queue << full
+  end
+end
+
+if (last = packer.flush)
+  queue << last
+end
+options[:workers].times { queue << nil }
+workers.each(&:join)
+reporter.kill
+writer.close
+
+s = stats.snapshot
+puts
+puts 'run complete:'
+puts "  notes done:        #{s[:notes_done]} (#{s[:local_only]} resolved with zero API tokens)"
+puts "  resumed (skipped): #{s[:resumed]}"
+puts "  tokens spent:      #{s[:tokens_spent]}"
+puts "  requests:          #{s[:requests]} (429s: #{s[:http_429]}, 500s retried: #{s[:http_500]})"
+puts "  name cache:        #{cache.stats[:confirmed]} confirmed, #{cache.stats[:rejected]} rejected"
+puts "  audits:            #{s[:full_audits]} full-note, #{s[:audit_probes]} reject-probes, " \
+     "#{s[:audit_reversals]} reversals, #{s[:filter_misses]} filter misses"
+puts "  FAILED (rerun to retry): #{s[:failed_notes]} notes" if s[:failed_notes].positive?
+puts "  wall time:         #{stats.elapsed.round(1)}s"

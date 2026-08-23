@@ -1,0 +1,94 @@
+{
+  "note_id": "note-0000005",
+  "text": "PATIENT: Hiroshi Allen\nMRN: 3670226\nDOB: 12/28/1992\nDATE OF SERVICE: 08/15/2025\n\nHISTORY OF PRESENT ILLNESS:\nHiroshi Allen is a 33-year-old male presenting with a productive cough. He has a known history of congestive heart failure and asthma. He rates the discomfort 5/10 at worst. Over-the-counter analgesics have provided minimal relief. He denies any recent travel or sick contacts. The patient's brother, William, is present and notes increased fatigue at home. \n\nREVIEW OF SYSTEMS:\nReports mild fatigue over the past several weeks. Denies unintentional weight loss. Reports a nonproductive cough for the past week. No dysuria or hematuria. Reports intermittent joint stiffness in the morning.\n\nPHYSICAL EXAM:\nVITALS: BP 153/61, HR 67, RR 18, Temp 98.3F, SpO2 92% on room air.\nNEUROLOGIC: Cranial nerves II-XII grossly intact. Strength 5/5 throughout.\nSKIN: Warm and dry, no lesions.\nGENERAL: Alert and oriented x3, in no acute distress.\nCARDIOVASCULAR: Regular rate and rhythm, no murmurs, rubs, or gallops.\nEXTREMITIES: No edema, cyanosis, or clubbing. Pulses 2+ bilaterally.\nRESPIRATORY: Clear to auscultation bilaterally, no wheezes or crackles.\nHEENT: Normocephalic, atraumatic. Mucous membranes moist.\nPSYCHIATRIC: Appropriate mood and affect.\n\nLABS:\nLDL 152 mg/dL. Sodium 133, Potassium 4.1, Creatinine 1.67. WBC 8.1, Hgb 12.1, Plt 398.\n\nCURRENT MEDICATIONS:\n1. sertraline 50 mg daily\n2. insulin glargine 20 units nightly\n3. lisinopril 10 mg daily\n4. metformin 1000 mg twice daily\n5. omeprazole 20 mg daily\n6. furosemide 20 mg daily\n\nASSESSMENT AND PLAN:\n1. Copd: Repeat imaging if symptoms persist. Follow-up labs ordered.\n2. Hypertension: Referral placed to specialty clinic. Medication reconciliation completed.\n3. Congestive heart failure: Return precautions reviewed. Follow-up labs ordered.\n\nINTERVAL NOTES:\n1830: Ambulating in hallway without assistance. Vital signs remained stable throughout.\n2100: Patient declined additional questions at this time. Patient rested comfortably during the visit. Tolerating oral intake well.\n1300: Patient rested comfortably during the visit. Will continue to monitor and reassess in the morning. No acute events overnight.\n1200: Patient verbalized understanding of the plan of care. No acute events overnight. Will continue to monitor and reassess in the morning.\n2100: No acute events overnight. Education provided regarding medication adherence. Ambulating in hallway without assistance.\n1715: Will continue to monitor and reassess in the morning. Vital signs remained stable throughout. Patient verbalized understanding of the plan of care.\n1500: Patient rested comfortably during the visit. Ambulating in hallway without assistance. Call light within reach; safety precautions in place.\n1815: Will continue to monitor and reassess in the morning.\n1300: Ambulating in hallway without assistance. Vital signs remained stable throughout. Patient rested comfortably during the visit.\n\nElectronically signed by Dr. Brian Chang, MD on 06/03/2025.\n",
+  "internal_annotations": [
+    {
+      "type": "FIRST_NAME",
+      "text": "Hiroshi",
+      "start": 9,
+      "end": 16
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Allen",
+      "start": 17,
+      "end": 22
+    },
+    {
+      "type": "MRN",
+      "text": "3670226",
+      "start": 28,
+      "end": 35
+    },
+    {
+      "type": "DATE",
+      "text": "12/28/1992",
+      "start": 41,
+      "end": 51
+    },
+    {
+      "type": "DATE",
+      "text": "08/15/2025",
+      "start": 69,
+      "end": 79
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "Hiroshi",
+      "start": 109,
+      "end": 116
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Allen",
+      "start": 117,
+      "end": 122
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "William",
+      "start": 410,
+      "end": 417
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "Brian",
+      "start": 2969,
+      "end": 2974
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Chang",
+      "start": 2975,
+      "end": 2980
+    },
+    {
+      "type": "DATE",
+      "text": "06/03/2025",
+      "start": 2988,
+      "end": 2998
+    }
+  ],
+  "ground_truth_first_names": [
+    {
+      "text": "Hiroshi",
+      "start": 9,
+      "end": 16
+    },
+    {
+      "text": "Hiroshi",
+      "start": 109,
+      "end": 116
+    },
+    {
+      "text": "William",
+      "start": 410,
+      "end": 417
+    },
+    {
+      "text": "Brian",
+      "start": 2969,
+      "end": 2974
+    }
+  ]
+}

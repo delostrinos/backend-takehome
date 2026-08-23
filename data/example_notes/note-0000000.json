@@ -1,0 +1,71 @@
+{
+  "note_id": "note-0000000",
+  "text": "PATIENT: Patricia Perez\nMRN: 4744854\nDOB: 03/24/1966\nDATE OF SERVICE: 02/22/2024\n\nHISTORY OF PRESENT ILLNESS:\nPatricia Perez is a 59-year-old female presenting with worsening shortness of breath. She denies any recent travel or sick contacts. She rates the discomfort 5/10 at worst. \n\nREVIEW OF SYSTEMS:\nDenies fever, chills, or night sweats. No chest pain or palpitations. Denies unintentional weight loss. No dysuria or hematuria. Positive for occasional headaches. Reports mild fatigue over the past several weeks.\n\nPHYSICAL EXAM:\nVITALS: BP 127/79, HR 60, RR 13, Temp 98.3F, SpO2 97% on room air.\nABDOMEN: Soft, non-tender, non-distended. Normal bowel sounds.\nGENERAL: Alert and oriented x3, in no acute distress.\nEXTREMITIES: No edema, cyanosis, or clubbing. Pulses 2+ bilaterally.\nRESPIRATORY: Clear to auscultation bilaterally, no wheezes or crackles.\nPSYCHIATRIC: Appropriate mood and affect.\nSKIN: Warm and dry, no lesions.\n\nLABS:\nWBC 12.3, Hgb 12.8, Plt 300. Sodium 143, Potassium 4.5, Creatinine 1.98.\n\nCURRENT MEDICATIONS:\n1. metformin 1000 mg twice daily\n2. amlodipine 5 mg daily\n3. insulin glargine 20 units nightly\n4. omeprazole 20 mg daily\n5. levothyroxine 75 mcg daily\n\nASSESSMENT AND PLAN:\n1. Major depressive disorder: Return precautions reviewed. Follow-up labs ordered.\n2. Chronic kidney disease stage 3: Referral placed to specialty clinic. Return precautions reviewed.\n3. Copd: Discussed lifestyle modification in detail. Return precautions reviewed.\n\nINTERVAL NOTES:\n0815: No acute events overnight. Patient verbalized understanding of the plan of care. Education provided regarding medication adherence.\n1830: Patient declined additional questions at this time. No acute events overnight. Tolerating oral intake well.\n0715: Tolerating oral intake well.\n1830: No acute events overnight.\n1615: Education provided regarding medication adherence. Call light within reach; safety precautions in place. Will continue to monitor and reassess in the morning.\n1030: No acute events overnight.\n1445: Call light within reach; safety precautions in place. Tolerating oral intake well. No acute events overnight.\n1045: Patient rested comfortably during the visit.\n0915: Patient verbalized understanding of the plan of care. Call light within reach; safety precautions in place. Vital signs remained stable throughout.\n1845: Education provided regarding medication adherence. Patient declined additional questions at this time. Ambulating in hallway without assistance.\n0600: Patient declined additional questions at this time. Ambulating in hallway without assistance. Tolerating oral intake well.\n\nElectronically signed by Dr. Joseph Thompson, MD on 08/01/2025.\n",
+  "internal_annotations": [
+    {
+      "type": "LAST_NAME",
+      "text": "Perez",
+      "start": 18,
+      "end": 23
+    },
+    {
+      "type": "MRN",
+      "text": "4744854",
+      "start": 29,
+      "end": 36
+    },
+    {
+      "type": "DATE",
+      "text": "03/24/1966",
+      "start": 42,
+      "end": 52
+    },
+    {
+      "type": "DATE",
+      "text": "02/22/2024",
+      "start": 70,
+      "end": 80
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Perez",
+      "start": 119,
+      "end": 124
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "Joseph",
+      "start": 2640,
+      "end": 2646
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Thompson",
+      "start": 2647,
+      "end": 2655
+    },
+    {
+      "type": "DATE",
+      "text": "08/01/2025",
+      "start": 2663,
+      "end": 2673
+    }
+  ],
+  "ground_truth_first_names": [
+    {
+      "text": "Patricia",
+      "start": 9,
+      "end": 17
+    },
+    {
+      "text": "Patricia",
+      "start": 110,
+      "end": 118
+    },
+    {
+      "text": "Joseph",
+      "start": 2640,
+      "end": 2646
+    }
+  ]
+}

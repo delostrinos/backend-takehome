@@ -1,0 +1,83 @@
+{
+  "note_id": "note-0000007",
+  "text": "PATIENT: Anders King\nMRN: 4044882\nDOB: 10/14/1970\nDATE OF SERVICE: 11/27/2025\n\nHISTORY OF PRESENT ILLNESS:\nAnders King is a 55-year-old male presenting with diffuse abdominal pain. He has a known history of chronic kidney disease stage 3 and major depressive disorder. Symptoms are improved with rest. \n\nREVIEW OF SYSTEMS:\nDenies fever, chills, or night sweats. Reports intermittent joint stiffness in the morning. Reports mild fatigue over the past several weeks. No dysuria or hematuria. Positive for occasional headaches. No chest pain or palpitations. No rashes or skin changes noted. Denies nausea, vomiting, or diarrhea.\n\nPHYSICAL EXAM:\nVITALS: BP 165/58, HR 96, RR 20, Temp 98.6F, SpO2 92% on room air.\nPSYCHIATRIC: Appropriate mood and affect.\nEXTREMITIES: No edema, cyanosis, or clubbing. Pulses 2+ bilaterally.\nABDOMEN: Soft, non-tender, non-distended. Normal bowel sounds.\nRESPIRATORY: Clear to auscultation bilaterally, no wheezes or crackles.\nSKIN: Warm and dry, no lesions.\n\nLABS:\nBasic metabolic panel otherwise within normal limits. Sodium 137, Potassium 4.1, Creatinine 1.72. HbA1c 5.8%.\n\nCURRENT MEDICATIONS:\n1. lisinopril 10 mg daily\n2. furosemide 20 mg daily\n3. omeprazole 20 mg daily\n4. metformin 1000 mg twice daily\n5. amlodipine 5 mg daily\n6. sertraline 50 mg daily\n7. insulin glargine 20 units nightly\n\nASSESSMENT AND PLAN:\n1. Type 2 diabetes mellitus: Medication reconciliation completed. Return precautions reviewed.\n2. Major depressive disorder: Discussed lifestyle modification in detail. Medication reconciliation completed.\n3. Copd: Discussed lifestyle modification in detail. Referral placed to specialty clinic.\n\nINTERVAL NOTES:\n2145: Education provided regarding medication adherence.\n1045: Will continue to monitor and reassess in the morning.\n2215: Ambulating in hallway without assistance.\n1930: Ambulating in hallway without assistance. Patient rested comfortably during the visit. Will continue to monitor and reassess in the morning.\n1545: Education provided regarding medication adherence.\n\nElectronically signed by Dr. Deepa Torres, MD on 09/25/2025.\n",
+  "internal_annotations": [
+    {
+      "type": "FIRST_NAME",
+      "text": "Anders",
+      "start": 9,
+      "end": 15
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "King",
+      "start": 16,
+      "end": 20
+    },
+    {
+      "type": "MRN",
+      "text": "4044882",
+      "start": 26,
+      "end": 33
+    },
+    {
+      "type": "DATE",
+      "text": "10/14/1970",
+      "start": 39,
+      "end": 49
+    },
+    {
+      "type": "DATE",
+      "text": "11/27/2025",
+      "start": 67,
+      "end": 77
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "Anders",
+      "start": 107,
+      "end": 113
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "King",
+      "start": 114,
+      "end": 118
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "Deepa",
+      "start": 2060,
+      "end": 2065
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Torres",
+      "start": 2066,
+      "end": 2072
+    },
+    {
+      "type": "DATE",
+      "text": "09/25/2025",
+      "start": 2080,
+      "end": 2090
+    }
+  ],
+  "ground_truth_first_names": [
+    {
+      "text": "Anders",
+      "start": 9,
+      "end": 15
+    },
+    {
+      "text": "Anders",
+      "start": 107,
+      "end": 113
+    },
+    {
+      "text": "Deepa",
+      "start": 2060,
+      "end": 2065
+    }
+  ]
+}

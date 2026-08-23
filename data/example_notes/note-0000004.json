@@ -1,0 +1,60 @@
+{
+  "note_id": "note-0000004",
+  "text": "PATIENT: Dmitri Lewis\nMRN: 6049101\nDOB: 07/18/1957\nDATE OF SERVICE: 01/10/2025\n\nHISTORY OF PRESENT ILLNESS:\nDmitri Lewis is a 68-year-old male presenting with bilateral knee pain. Symptoms are improved with rest. He rates the discomfort 9/10 at worst. He reports symptoms began approximately 7 weeks ago. He denies any recent travel or sick contacts. \n\nREVIEW OF SYSTEMS:\nReports a nonproductive cough for the past week. Positive for occasional headaches. Denies nausea, vomiting, or diarrhea. Denies shortness of breath at rest. No chest pain or palpitations.\n\nPHYSICAL EXAM:\nVITALS: BP 103/60, HR 69, RR 19, Temp 99.1F, SpO2 93% on room air.\nNEUROLOGIC: Cranial nerves II-XII grossly intact. Strength 5/5 throughout.\nRESPIRATORY: Clear to auscultation bilaterally, no wheezes or crackles.\nEXTREMITIES: No edema, cyanosis, or clubbing. Pulses 2+ bilaterally.\nPSYCHIATRIC: Appropriate mood and affect.\nSKIN: Warm and dry, no lesions.\nABDOMEN: Soft, non-tender, non-distended. Normal bowel sounds.\nHEENT: Normocephalic, atraumatic. Mucous membranes moist.\n\nLABS:\nWBC 6.1, Hgb 14.4, Plt 152. TSH within reference range. Sodium 134, Potassium 4.7, Creatinine 0.95. Basic metabolic panel otherwise within normal limits. LDL 149 mg/dL.\n\nElectronically signed by S. Wright, MD on 09/20/2025.\n",
+  "internal_annotations": [
+    {
+      "type": "LAST_NAME",
+      "text": "Lewis",
+      "start": 16,
+      "end": 21
+    },
+    {
+      "type": "MRN",
+      "text": "6049101",
+      "start": 27,
+      "end": 34
+    },
+    {
+      "type": "DATE",
+      "text": "07/18/1957",
+      "start": 40,
+      "end": 50
+    },
+    {
+      "type": "DATE",
+      "text": "01/10/2025",
+      "start": 68,
+      "end": 78
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Lewis",
+      "start": 115,
+      "end": 120
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Wright",
+      "start": 1260,
+      "end": 1266
+    },
+    {
+      "type": "DATE",
+      "text": "09/20/2025",
+      "start": 1274,
+      "end": 1284
+    }
+  ],
+  "ground_truth_first_names": [
+    {
+      "text": "Dmitri",
+      "start": 9,
+      "end": 15
+    },
+    {
+      "text": "Dmitri",
+      "start": 108,
+      "end": 114
+    }
+  ]
+}

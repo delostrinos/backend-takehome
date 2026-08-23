@@ -1,0 +1,105 @@
+{
+  "note_id": "note-0000001",
+  "text": "PATIENT: Baptiste Patel\nMRN: 3564217\nDOB: 06/25/1960\nDATE OF SERVICE: 03/18/2024\n\nHISTORY OF PRESENT ILLNESS:\nBaptiste Patel is a 65-year-old female presenting with diffuse abdominal pain. She denies any recent travel or sick contacts. She reports symptoms began approximately 2 days ago. The patient's sister, David, is present and notes increased unsteadiness at home. The case was discussed with Dr. Wei Okafor of pulmonology. \n\nREVIEW OF SYSTEMS:\nDenies unintentional weight loss. Denies nausea, vomiting, or diarrhea. No visual changes or hearing loss. Reports a nonproductive cough for the past week. Positive for occasional headaches. Denies shortness of breath at rest. No dysuria or hematuria. No chest pain or palpitations.\n\nPHYSICAL EXAM:\nVITALS: BP 156/91, HR 82, RR 13, Temp 97.8F, SpO2 93% on room air.\nGENERAL: Alert and oriented x3, in no acute distress.\nRESPIRATORY: Clear to auscultation bilaterally, no wheezes or crackles.\nABDOMEN: Soft, non-tender, non-distended. Normal bowel sounds.\nHEENT: Normocephalic, atraumatic. Mucous membranes moist.\nPSYCHIATRIC: Appropriate mood and affect.\nNEUROLOGIC: Cranial nerves II-XII grossly intact. Strength 5/5 throughout.\n\nLABS:\nSodium 133, Potassium 4.9, Creatinine 0.71. TSH within reference range. Basic metabolic panel otherwise within normal limits. HbA1c 6.5%. LDL 145 mg/dL.\n\nCURRENT MEDICATIONS:\n1. gabapentin 300 mg three times daily\n2. omeprazole 20 mg daily\n3. amlodipine 5 mg daily\n4. metformin 1000 mg twice daily\n\nASSESSMENT AND PLAN:\n1. Major depressive disorder: Return precautions reviewed. Referral placed to specialty clinic.\n2. Hyperlipidemia: Repeat imaging if symptoms persist. Referral placed to specialty clinic.\n\nINTERVAL NOTES:\n0700: Call light within reach; safety precautions in place.\n1600: No acute events overnight.\n1245: Call light within reach; safety precautions in place.\n1130: No acute events overnight. Vital signs remained stable throughout.\n2000: Patient declined additional questions at this time.\n0600: Patient verbalized understanding of the plan of care.\n1945: No acute events overnight. Call light within reach; safety precautions in place.\n0715: Patient rested comfortably during the visit. Call light within reach; safety precautions in place.\n1445: Call light within reach; safety precautions in place. Patient declined additional questions at this time.\n2115: Ambulating in hallway without assistance.\n1200: Patient declined additional questions at this time. Patient rested comfortably during the visit. Tolerating oral intake well.\n\nElectronically signed by Dr. Linda Brown, MD on 09/28/2024.\n",
+  "internal_annotations": [
+    {
+      "type": "FIRST_NAME",
+      "text": "Baptiste",
+      "start": 9,
+      "end": 17
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Patel",
+      "start": 18,
+      "end": 23
+    },
+    {
+      "type": "MRN",
+      "text": "3564217",
+      "start": 29,
+      "end": 36
+    },
+    {
+      "type": "DATE",
+      "text": "06/25/1960",
+      "start": 42,
+      "end": 52
+    },
+    {
+      "type": "DATE",
+      "text": "03/18/2024",
+      "start": 70,
+      "end": 80
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "Baptiste",
+      "start": 110,
+      "end": 118
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Patel",
+      "start": 119,
+      "end": 124
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "Wei",
+      "start": 403,
+      "end": 406
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Okafor",
+      "start": 407,
+      "end": 413
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "Linda",
+      "start": 2571,
+      "end": 2576
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Brown",
+      "start": 2577,
+      "end": 2582
+    },
+    {
+      "type": "DATE",
+      "text": "09/28/2024",
+      "start": 2590,
+      "end": 2600
+    }
+  ],
+  "ground_truth_first_names": [
+    {
+      "text": "Baptiste",
+      "start": 9,
+      "end": 17
+    },
+    {
+      "text": "Baptiste",
+      "start": 110,
+      "end": 118
+    },
+    {
+      "text": "David",
+      "start": 311,
+      "end": 316
+    },
+    {
+      "text": "Wei",
+      "start": 403,
+      "end": 406
+    },
+    {
+      "text": "Linda",
+      "start": 2571,
+      "end": 2576
+    }
+  ]
+}

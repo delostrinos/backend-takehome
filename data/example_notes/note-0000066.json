@@ -1,0 +1,114 @@
+{
+    "note_id": "note-0000066", 
+    "text": "PATIENT: Nancy Walker\nMRN: 9856721\nDOB: 06/13/1938\nDATE OF SERVICE: 05/03/2024\n\nHISTORY OF PRESENT ILLNESS:\nNancy Walker is a 87-year-old male presenting with progressive lower extremity swelling. He has a known history of COPD and congestive heart failure. Symptoms are improved with rest. Per Carol (son), the patient has been less active recently. The case was discussed with Dr. Linda White of endocrinology. Triage performed by RN Charles; initial assessment documented. \n\nREVIEW OF SYSTEMS:\nNo dysuria or hematuria. Positive for occasional headaches. Denies unintentional weight loss. Reports mild fatigue over the past several weeks. Denies fever, chills, or night sweats. No visual changes or hearing loss. Denies shortness of breath at rest.\n\nPHYSICAL EXAM:\nVITALS: BP 130/89, HR 86, RR 20, Temp 98.3F, SpO2 93% on room air.\nGENERAL: Alert and oriented x3, in no acute distress.\nEXTREMITIES: No edema, cyanosis, or clubbing. Pulses 2+ bilaterally.\nRESPIRATORY: Clear to auscultation bilaterally, no wheezes or crackles.\nABDOMEN: Soft, non-tender, non-distended. Normal bowel sounds.\nNEUROLOGIC: Cranial nerves II-XII grossly intact. Strength 5/5 throughout.\nPSYCHIATRIC: Appropriate mood and affect.\n\nLABS:\nHbA1c 8.8%. TSH within reference range. LDL 91 mg/dL.\n\nCURRENT MEDICATIONS:\n1. metformin 1000 mg twice daily\n2. aspirin 81 mg daily\n3. furosemide 20 mg daily\n4. amlodipine 5 mg daily\n5. atorvastatin 40 mg nightly\n6. gabapentin 300 mg three times daily\n\nASSESSMENT AND PLAN:\n1. Copd: Medication reconciliation completed. Continue current regimen.\n2. Atrial fibrillation: Continue current regimen. Repeat imaging if symptoms persist.\n3. Gerd: Medication reconciliation completed. Repeat imaging if symptoms persist.\n4. Hyperlipidemia: Discussed lifestyle modification in detail. Return precautions reviewed.\n\nElectronically signed by Dr. Lisa Smith, MD on 08/09/2025.\n", 
+    "internal_annotations": [
+        {
+            "type": "LAST_NAME", 
+            "text": "Walker", 
+            "start": 15, "end": 21
+        }, 
+        {
+            "type": "MRN", 
+            "text": "9856721", 
+            "start": 27, "end": 34
+        }, 
+        {
+            "type": "DATE", 
+            "text": "06/13/1938", 
+            "start": 40, 
+            "end": 50
+        }, 
+        {
+            "type": "DATE", 
+            "text": "05/03/2024", 
+            "start": 68, 
+            "end": 78
+        }, 
+        {
+            "type": "FIRST_NAME", 
+            "text": "Nancy", 
+            "start": 108, 
+            "end": 113
+        }, 
+        {
+            "type": "LAST_NAME", 
+            "text": "Walker", 
+            "start": 114, 
+            "end": 120
+        }, 
+        {
+            "type": "FIRST_NAME", 
+            "text": "Carol", 
+            "start": 295, 
+            "end": 300
+        }, 
+        {
+            "type": "LAST_NAME", 
+            "text": "White", 
+            "start": 389, 
+            "end": 394
+        }, 
+        {
+            "type": "FIRST_NAME", 
+            "text": "Charles", 
+            "start": 436, 
+            "end": 443
+        }, 
+        {
+            "type": "FIRST_NAME", 
+            "text": "Repeat", 
+            "start": 1612, 
+            "end": 1618
+        }, 
+        {
+            "type": "FIRST_NAME", 
+            "text": "Lisa", 
+            "start": 1852, 
+            "end": 1856
+        }, 
+        {
+            "type": "LAST_NAME", 
+            "text": "Smith", 
+            "start": 1857, 
+            "end": 1862
+        }, 
+        {
+            "type": "DATE", 
+            "text": "08/09/2025", 
+            "start": 1870, 
+            "end": 1880
+        }
+    ], 
+    "ground_truth_first_names": [
+        {
+            "text": "Nancy", 
+            "start": 9, 
+            "end": 14
+        }, 
+        {
+            "text": "Nancy", 
+            "start": 108, 
+            "end": 113
+        }, 
+        {
+            "text": "Carol", 
+            "start": 295, 
+            "end": 300
+        }, 
+        {
+            "text": "Linda", 
+            "start": 383, 
+            "end": 388
+        }, 
+        {
+            "text": "Charles", 
+            "start": 436, 
+            "end": 443
+        }, 
+        {
+            "text": "Lisa", 
+            "start": 1852, 
+            "end": 1856
+        }
+    ]
+}

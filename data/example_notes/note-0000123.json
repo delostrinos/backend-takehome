@@ -1,0 +1,101 @@
+{
+    "note_id": "note-0000123", 
+    "text": "PATIENT: Lucia Larsson\nMRN: 5402967\nDOB: 12/27/1943\nDATE OF SERVICE: 06/15/2025\n\nHISTORY OF PRESENT ILLNESS:\nLucia Larsson is a 82-year-old female presenting with dizziness and lightheadedness. She rates the discomfort 9/10 at worst. She denies any recent travel or sick contacts. The patient's caregiver, Dorothy, is present and notes increased coughing at home. \n\nREVIEW OF SYSTEMS:\nReports intermittent joint stiffness in the morning. No rashes or skin changes noted. Reports a nonproductive cough for the past week. No chest pain or palpitations. No visual changes or hearing loss. No dysuria or hematuria. Denies nausea, vomiting, or diarrhea.\n\nPHYSICAL EXAM:\nVITALS: BP 153/59, HR 109, RR 14, Temp 99.7F, SpO2 98% on room air.\nNEUROLOGIC: Cranial nerves II-XII grossly intact. Strength 5/5 throughout.\nEXTREMITIES: No edema, cyanosis, or clubbing. Pulses 2+ bilaterally.\nGENERAL: Alert and oriented x3, in no acute distress.\nRESPIRATORY: Clear to auscultation bilaterally, no wheezes or crackles.\nHEENT: Normocephalic, atraumatic. Mucous membranes moist.\n\nLABS:\nLDL 85 mg/dL. Basic metabolic panel otherwise within normal limits.\n\nCURRENT MEDICATIONS:\n1. levothyroxine 75 mcg daily\n2. furosemide 20 mg daily\n3. insulin glargine 20 units nightly\n4. amlodipine 5 mg daily\n\nASSESSMENT AND PLAN:\n1. Asthma: Medication reconciliation completed. Referral placed to specialty clinic.\n2. Osteoarthritis: Repeat imaging if symptoms persist. Medication reconciliation completed.\n\nINTERVAL NOTES:\n1145: Patient rested comfortably during the visit. Tolerating oral intake well. Vital signs remained stable throughout.\n0830: Education provided regarding medication adherence. Ambulating in hallway without assistance. Patient verbalized understanding of the plan of care.\n1345: Call light within reach; safety precautions in place.\n2100: Patient verbalized understanding of the plan of care. Tolerating oral intake well.\n1545: Vital signs remained stable throughout. Patient verbalized understanding of the plan of care. Ambulating in hallway without assistance.\n1630: Patient verbalized understanding of the plan of care. Tolerating oral intake well. Education provided regarding medication adherence.\n0800: Tolerating oral intake well. Call light within reach; safety precautions in place.\n1315: No acute events overnight. Tolerating oral intake well.\n2130: Tolerating oral intake well. Will continue to monitor and reassess in the morning. No acute events overnight.\n1030: Will continue to monitor and reassess in the morning. No acute events overnight. Patient declined additional questions at this time.\n1345: Education provided regarding medication adherence. Patient rested comfortably during the visit. Tolerating oral intake well.\n2200: Patient verbalized understanding of the plan of care. Tolerating oral intake well.\n0845: Will continue to monitor and reassess in the morning. Ambulating in hallway without assistance.\n0845: No acute events overnight. Ambulating in hallway without assistance.\n1030: Education provided regarding medication adherence.\n1315: Patient rested comfortably during the visit. Tolerating oral intake well. Patient declined additional questions at this time.\n2115: Tolerating oral intake well. Education provided regarding medication adherence.\n1615: No acute events overnight. Vital signs remained stable throughout. Ambulating in hallway without assistance.\n0715: Patient declined additional questions at this time. Ambulating in hallway without assistance. No acute events overnight.\n1845: Patient rested comfortably during the visit. Ambulating in hallway without assistance. Patient declined additional questions at this time.\n1215: Patient rested comfortably during the visit. Will continue to monitor and reassess in the morning.\n1900: Education provided regarding medication adherence. Patient verbalized understanding of the plan of care.\n2045: Patient verbalized understanding of the plan of care. Education provided regarding medication adherence. Tolerating oral intake well.\n\nElectronically signed by Dr. Susan Perez, MD on 04/23/2025.\n", 
+    "internal_annotations": [
+        {
+            "type": "FIRST_NAME", 
+            "text": "Lucia", 
+            "start": 9, 
+            "end": 14
+        }, 
+        {
+            "type": "LAST_NAME", 
+            "text": "Larsson", 
+            "start": 15, 
+            "end": 22
+        }, 
+        {
+            "type": "MRN", 
+            "text": "5402967", 
+            "start": 28, 
+            "end": 
+            35
+        }, 
+        {
+            "type": "DATE", 
+            "text": "12/27/1943", 
+            "start": 41, 
+            "end": 51
+        }, 
+        {
+            "type": "DATE", 
+            "text": "06/15/2025", 
+            "start": 69, 
+            "end": 79
+        }, 
+        {
+            "type": "FIRST_NAME", 
+            "text": "Lucia", 
+            "start": 109, 
+            "end": 114
+        }, 
+        {
+            "type": "LAST_NAME", 
+            "text": "Larsson", 
+            "start": 115, 
+            "end": 122
+        }, 
+        {
+            "type": "FIRST_NAME", 
+            "text": "Dorothy", 
+            "start": 306, 
+            "end": 313
+        }, 
+        {
+            "type": "FIRST_NAME", 
+            "text": "Will", 
+            "start": 2469, 
+            "end": 2473
+        }, 
+        {
+            "type": "FIRST_NAME", 
+            "text": "Susan", 
+            "start": 4047, 
+            "end": 4052
+        }, 
+        {
+            "type": "LAST_NAME", 
+            "text": "Perez", 
+            "start": 4053, 
+            "end": 4058
+        }, 
+        {
+            "type": "DATE", 
+            "text": "04/23/2025", 
+            "start": 4066, 
+            "end": 4076
+        }
+    ], 
+    "ground_truth_first_names": [
+        {
+            "text": "Lucia", 
+            "start": 9, 
+            "end": 14
+        }, 
+        {
+            "text": "Lucia", 
+            "start": 109, 
+            "end": 114
+        }, 
+        {
+            "text": "Dorothy", 
+            "start": 306, 
+            "end": 313
+        }, 
+        {
+            "text": "Susan", 
+            "start": 4047, 
+            "end": 4052
+        }
+    ]
+}

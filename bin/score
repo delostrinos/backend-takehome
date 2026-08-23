@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require 'optparse'
+require_relative '../lib/scorer'
+
+options = { notes: 'data/notes.jsonl', results: 'out/results.jsonl' }
+OptionParser.new do |o|
+  o.banner = 'Usage: bin/score [--notes PATH] [--results PATH]'
+  o.on('--notes PATH')   { |v| options[:notes] = v }
+  o.on('--results PATH') { |v| options[:results] = v }
+end.parse!
+
+Scorer.run(notes_path: options[:notes], results_path: options[:results])

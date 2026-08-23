@@ -1,0 +1,83 @@
+{
+  "note_id": "note-0000006",
+  "text": "PATIENT: Carlos Martinez\nMRN: 3955087\nDOB: 12/17/1990\nDATE OF SERVICE: 11/09/2025\n\nHISTORY OF PRESENT ILLNESS:\nCarlos Martinez is a 35-year-old female presenting with bilateral knee pain. Symptoms are unchanged with rest. She denies any recent travel or sick contacts. The case was discussed with Dr. Carol Lopez of endocrinology. \n\nREVIEW OF SYSTEMS:\nNo dysuria or hematuria. Positive for occasional headaches. Denies shortness of breath at rest. Reports a nonproductive cough for the past week. Denies fever, chills, or night sweats. No visual changes or hearing loss.\n\nPHYSICAL EXAM:\nVITALS: BP 124/63, HR 69, RR 18, Temp 98.7F, SpO2 95% on room air.\nSKIN: Warm and dry, no lesions.\nPSYCHIATRIC: Appropriate mood and affect.\nNEUROLOGIC: Cranial nerves II-XII grossly intact. Strength 5/5 throughout.\nGENERAL: Alert and oriented x3, in no acute distress.\nEXTREMITIES: No edema, cyanosis, or clubbing. Pulses 2+ bilaterally.\nCARDIOVASCULAR: Regular rate and rhythm, no murmurs, rubs, or gallops.\nABDOMEN: Soft, non-tender, non-distended. Normal bowel sounds.\n\nLABS:\nHbA1c 10.5%. LDL 130 mg/dL. Basic metabolic panel otherwise within normal limits. Sodium 140, Potassium 4.3, Creatinine 1.15.\n\nCURRENT MEDICATIONS:\n1. amlodipine 5 mg daily\n2. metformin 1000 mg twice daily\n3. insulin glargine 20 units nightly\n4. albuterol inhaler as needed\n5. aspirin 81 mg daily\n\nASSESSMENT AND PLAN:\n1. Gerd: Medication reconciliation completed. Follow-up labs ordered.\n2. Copd: Discussed lifestyle modification in detail. Continue current regimen.\n3. Atrial fibrillation: Referral placed to specialty clinic. Follow-up labs ordered.\n4. Osteoarthritis: Referral placed to specialty clinic. Follow-up labs ordered.\n\nINTERVAL NOTES:\n1130: Patient declined additional questions at this time.\n1030: Patient rested comfortably during the visit.\n1515: Education provided regarding medication adherence. Vital signs remained stable throughout. Patient rested comfortably during the visit.\n1545: Education provided regarding medication adherence. Tolerating oral intake well.\n1100: Education provided regarding medication adherence. Vital signs remained stable throughout.\n0845: Vital signs remained stable throughout. Patient rested comfortably during the visit.\n1015: Ambulating in hallway without assistance. Vital signs remained stable throughout. No acute events overnight.\n0945: Will continue to monitor and reassess in the morning. No acute events overnight. Call light within reach; safety precautions in place.\n2045: Will continue to monitor and reassess in the morning. Call light within reach; safety precautions in place.\n1500: Vital signs remained stable throughout. No acute events overnight. Patient declined additional questions at this time.\n1400: No acute events overnight.\n1100: Patient rested comfortably during the visit.\n1945: Will continue to monitor and reassess in the morning. Education provided regarding medication adherence. Ambulating in hallway without assistance.\n0715: Ambulating in hallway without assistance. Education provided regarding medication adherence.\n0815: Will continue to monitor and reassess in the morning. No acute events overnight.\n1900: No acute events overnight. Patient verbalized understanding of the plan of care. Ambulating in hallway without assistance.\n1000: Patient verbalized understanding of the plan of care.\n1530: Vital signs remained stable throughout. Education provided regarding medication adherence.\n1545: Patient declined additional questions at this time. Will continue to monitor and reassess in the morning.\n2145: Will continue to monitor and reassess in the morning.\n0745: Tolerating oral intake well. Ambulating in hallway without assistance. Patient rested comfortably during the visit.\n\nElectronically signed by B. Anderson, MD on 10/19/2024.\n",
+  "internal_annotations": [
+    {
+      "type": "LAST_NAME",
+      "text": "Martinez",
+      "start": 16,
+      "end": 24
+    },
+    {
+      "type": "MRN",
+      "text": "3955087",
+      "start": 30,
+      "end": 37
+    },
+    {
+      "type": "DATE",
+      "text": "12/17/1990",
+      "start": 43,
+      "end": 53
+    },
+    {
+      "type": "DATE",
+      "text": "11/09/2025",
+      "start": 71,
+      "end": 81
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Martinez",
+      "start": 118,
+      "end": 126
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "Carol",
+      "start": 301,
+      "end": 306
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Lopez",
+      "start": 307,
+      "end": 312
+    },
+    {
+      "type": "FIRST_NAME",
+      "text": "Medication",
+      "start": 1395,
+      "end": 1405
+    },
+    {
+      "type": "LAST_NAME",
+      "text": "Anderson",
+      "start": 3769,
+      "end": 3777
+    },
+    {
+      "type": "DATE",
+      "text": "10/19/2024",
+      "start": 3785,
+      "end": 3795
+    }
+  ],
+  "ground_truth_first_names": [
+    {
+      "text": "Carlos",
+      "start": 9,
+      "end": 15
+    },
+    {
+      "text": "Carlos",
+      "start": 111,
+      "end": 117
+    },
+    {
+      "text": "Carol",
+      "start": 301,
+      "end": 306
+    }
+  ]
+}
